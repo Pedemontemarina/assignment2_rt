@@ -13,5 +13,20 @@ def generate_launch_description():
             ],
             output='screen'
         ),
+        ExecuteProcess(
+            cmd=[
+                'xterm', '-hold', '-e',
+                'bash -c "ros2 run assignment2_rt threshold_service"'
+            ],
+            output='screen'
+        ),
+
+        ExecuteProcess(
+            cmd=[
+                'xterm', '-hold', '-e',
+                'bash -c "ros2 run assignment2_rt control"'
+            ],
+            output='screen'
+        )
 
         ])

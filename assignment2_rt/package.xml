@@ -17,11 +17,17 @@
   <exec_depend>launch</exec_depend> 
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>xterm</exec_depend>
+  <exec_depend>custom_message</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+
 
 <build_depend>ament_cmake</build_depend>
 <build_depend>ament_python</build_depend>
 <build_depend>geometry_msgs</build_depend>
-
+<build_depend>custom_message</build_depend>
+<build_depend>sensor_msgs</build_depend>
+<build_depend>nav_msgs</build_depend>
 
 
   <export>
