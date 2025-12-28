@@ -34,8 +34,6 @@ class MoveRobot(Node):
         while not self.client.wait_for_service(timeout_sec=1.0): 
             self.get_logger().info('Waiting for get_average service...') 
 
-        self.req = Average.call_service()
-
     def send_command(self, linear_x=0.0, angular_z=0.0):
         msg = Twist()
         msg.linear.x = linear_x
@@ -68,7 +66,8 @@ class MoveRobot(Node):
                 print("invalid input, please enter 'y' or 'n'.")
     
     def call_service(self):
-        future = self.client.call_async(self.req)
+        req = Average.Request()
+        future = self.client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         response = future.result()
         if response is not None: 

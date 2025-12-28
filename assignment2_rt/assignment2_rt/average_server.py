@@ -1,5 +1,4 @@
 from collections import deque
-
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
@@ -29,7 +28,7 @@ class AverageServer(Node):
 
     def callback(self, request, response):
       
-        if len(self.linear_history) == 0:
+        if len(self.linear_queue) == 0:
             response.avg_linear = 0.0
             response.avg_angular = 0.0
             return response
@@ -37,9 +36,7 @@ class AverageServer(Node):
         response.avg_linear = sum(self.linear_queue) / len(self.linear_queue)
         response.avg_angular = sum(self.angular_queue) / len(self.angular_queue)
 
-        self.get_logger().info(
-            f"Average → linear velocity ={response.avg_linear:.2f}, angular velocity={response.avg_angular:.2f}"
-        )
+        self.get_logger().info( f"Average → linear velocity ={response.avg_linear:.2f}, angular velocity={response.avg_angular:.2f}")
         return response
 
 

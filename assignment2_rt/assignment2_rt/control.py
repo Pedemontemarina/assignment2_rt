@@ -114,7 +114,7 @@ class Control(Node):
         distance_msg.direction = define_direction_from_index(self.min_index)
         distance_msg.threshold = self.threshold
         self.publisher_info.publish(distance_msg)
-        self.get_logger().info(f"Publishing obstacle info: distance={self.min_distance}, direction={distance_msg.direction}, threshold={self.threshold}")
+        # self.get_logger().info(f"Publishing obstacle info: distance={self.min_distance}, direction={distance_msg.direction}, threshold={self.threshold}")
     
     def control_loop(self):
 
