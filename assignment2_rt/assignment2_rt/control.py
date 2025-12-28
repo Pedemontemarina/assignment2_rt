@@ -58,7 +58,7 @@ class Control(Node):
         self.subscription = self.create_subscription(LaserScan,'/scan',self.laser_callback,10)
         
         # velocity subscriber - to get the position/velocity of the robot
-        self.subscription = self.create_subscription(Twist,'/cmd_vel',self.velocity_callback,10)
+        self.subscription = self.create_subscription(Twist,'/cmd_user_vel',self.velocity_callback,10)
 
         #client to set threshold service
         self.client = self.create_client(Threshold,'get_threshold')

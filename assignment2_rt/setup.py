@@ -24,6 +24,7 @@ setup(
             'move_robot = assignment2_rt.move_robot:main',
             'threshold_service = assignment2_rt.threshold_service:main',
             'control = assignment2_rt.control:main',
+            'average_server = assignment2_rt.average_server:main',
         ],
     },
 )

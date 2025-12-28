@@ -20,6 +20,13 @@ def generate_launch_description():
             ],
             output='screen'
         ),
+         ExecuteProcess(
+            cmd=[
+                'xterm', '-hold', '-e',
+                'bash -c "ros2 run assignment2_rt average_service"'
+            ],
+            output='screen'
+        ),
 
         ExecuteProcess(
             cmd=[
