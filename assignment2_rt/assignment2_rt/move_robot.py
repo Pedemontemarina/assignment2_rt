@@ -27,6 +27,9 @@ class MoveRobot(Node):
         super().__init__('move_robot') # name of the node
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
 
+        # potrei fare un client per ritornare la media dei 5 ultimi input 
+        # 
+
 
     def send_command(self, linear_x=0.0, angular_z=0.0):
         msg = Twist()
@@ -55,6 +58,8 @@ class MoveRobot(Node):
             angular_z = self.ask_float("Angular velocity (rad/s): ")
 
             self.send_command(linear_x, angular_z)
+
+
 
 
 def main(args=None):

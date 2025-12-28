@@ -51,6 +51,8 @@ class Control(Node):
         self.min_distance = float('inf')
         self.linear_velocity = 0.0
         self.angular_velocity = 0.0
+        self.backup_active = False
+
 
         # laser scanner subscriber - to read the distances from obstacles
         self.subscription = self.create_subscription(LaserScan,'/scan',self.laser_callback,10)
@@ -115,20 +117,55 @@ class Control(Node):
         self.get_logger().info(f"Publishing obstacle info: distance={self.min_distance}, direction={distance_msg.direction}, threshold={self.threshold}")
     
     def control_loop(self):
-        # check if the minimum distance is below the threshold
-        # if so, move the robot back to the last safe position
+
+        if self.backup_active:
+
+            # Se la distanza è tornata sicura → esci dal backup
+            if self.min_distance >= self.threshold:
+                self.get_logger().info("Safe distance restored, resuming normal control")
+                self.backup_active = False
+
+                # ferma il robot
+                twist = Twist()
+                self.publisher_.publish(twist)
+                return
+
+            # Altrimenti continua il backup
+            twist = self.compute_backup_twist()
+            self.publisher_.publish(twist)
+            return
+
+
+        # Se NON siamo in backup, controlliamo la distanza
         if self.min_distance < self.threshold:
-            self.get_logger().info("Too close to obstacle, moving back to safe position")
-            
-            # create a Twist message to move the robot back
-            twist = Twist()
-            twist.linear.x = -self.linear_velocity 
-            twist.angular.z = -self.angular_velocity  
+            self.get_logger().info("Obstacle too close, starting backup maneuver")
+
+            # attiva il backup
+            self.backup_active = True
+
+            twist = self.compute_backup_twist()
             self.publisher_.publish(twist)
-            time.sleep(1)  # move back for 1 second
-            # stop the robot
-            twist.linear.x = 0.0
-            self.publisher_.publish(twist)
+            return
+
+            # Altrimenti → controllo normale (l’utente comanda)
+            # non pubblichi nulla, lasci passare i comandi dell’utente
+
+    
+    def compute_backup_twist(self):
+        twist = Twist()
+        direction = define_direction_from_index(self.min_index)
+
+        if direction == "front":
+            twist.linear.x = -2.0      # ostacolo davanti → vai indietro
+        elif direction == "right":
+            twist.angular.z = 0.50      # ostacolo a destra → gira a sinistra
+        elif direction == "left":
+            twist.angular.z = -0.50     # ostacolo a sinistra → gira a destra
+        else:  # "unknown" → probabilmente dietro
+            twist.linear.x = 2.0     # ostacolo dietro → vai avanti
+
+        return twist
+
         
 
 def define_direction_from_index(index):
@@ -141,7 +178,10 @@ def define_direction_from_index(index):
         return "right"
     else:
         return "unknown"
-        
+
+
+
+
 def main(args=None):
     rclpy.init(args=args)
 
