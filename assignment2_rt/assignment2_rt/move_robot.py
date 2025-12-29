@@ -26,7 +26,10 @@ class MoveRobot(Node):
 
     def __init__(self):
         super().__init__('move_robot') # name of the node
-        self.publisher_ = self.create_publisher(Twist, '/cmd_user_vel', 10)
+
+        self.user_publisher_ = self.create_publisher(Twist, '/cmd_user_vel', 10)
+        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
+
 
         # potrei fare un client per ritornare la media dei 5 ultimi input 
         self.client = self.create_client(Average,'get_average')
@@ -38,7 +41,8 @@ class MoveRobot(Node):
         msg = Twist()
         msg.linear.x = linear_x
         msg.angular.z = angular_z
-        self.publisher_.publish(msg)
+        self.publisher_.publish(msg) #moves the robot
+        self.user_publisher_.publish(msg) #topic of user commands
         self.get_logger().info(f"Publishing cmd_vel: linear_x={linear_x}, angular_z={angular_z}")
 
         time.sleep(1)  # wait for 1 second
