@@ -18,7 +18,9 @@ This robot movement controller is very simple, it only accepts linear velocity i
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
 from custom_message.srv import Average
+from custom_message.msg import UserCommand
 import time
 
 
@@ -30,6 +32,7 @@ class MoveRobot(Node):
         self.user_publisher_ = self.create_publisher(Twist, '/cmd_user_vel', 10)
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
 
+        self.pos_subscriber_ = self.create_subscription(Odometry,'/odom',self.position_callback,10)
 
         # potrei fare un client per ritornare la media dei 5 ultimi input 
         self.client = self.create_client(Average,'get_average')
@@ -37,20 +40,13 @@ class MoveRobot(Node):
         while not self.client.wait_for_service(timeout_sec=1.0): 
             self.get_logger().info('Waiting for get_average service...') 
 
-    def send_command(self, linear_x=0.0, angular_z=0.0):
-        msg = Twist()
-        msg.linear.x = linear_x
-        msg.angular.z = angular_z
-        self.publisher_.publish(msg) #moves the robot
-        self.user_publisher_.publish(msg) #topic of user commands
-        self.get_logger().info(f"Publishing cmd_vel: linear_x={linear_x}, angular_z={angular_z}")
+        self.position = None
+        self.safe_position = None
 
-        time.sleep(1)  # wait for 1 second
-        # Stop the robot
-        stop_msg = Twist()
-        self.publisher_.publish(stop_msg)
-        self.get_logger().info("Publishing cmd_vel: linear_x=0.0, angular_z=0.0")
-
+    #-------------------------------------------------------------------------------------------------------
+    def position_callback(self, msg):
+            self.position = msg.pose.pose.position
+   
     def ask_float(self, prompt):
         while True:
             value = input(prompt)
@@ -69,19 +65,46 @@ class MoveRobot(Node):
             else:
                 print("invalid input, please enter 'y' or 'n'.")
     
+   #-------------------------------------------------------------------------------------------------------
     def call_service(self):
         req = Average.Request()
         future = self.client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         response = future.result()
         if response is not None: 
-
             print(f"\n Average of last 5 commands:") 
             print(f" Linear = {response.avg_linear:.3f}") 
             print(f" Angular = {response.avg_angular:.3f}\n") 
         else:
             print("Service call failed.")
+         
+   
+    def send_command(self, linear_x=0.0, angular_z=0.0):
 
+        if self.position is not None: 
+            self.safe_position = self.position
+            
+        msg = Twist()
+        msg.linear.x = linear_x
+        msg.angular.z = angular_z
+        self.publisher_.publish(msg) #moves the robot
+        self.get_logger().info(f"Publishing cmd_vel: linear_x={linear_x}, angular_z={angular_z}")
+
+        # Also publish to cmd_user_vel
+        user_msg = UserCommand()
+        user_msg.cmd = msg
+        if self.safe_position is not None: 
+            user_msg.safe_pose.position = self.safe_position
+
+        self.user_publisher_.publish(user_msg)
+
+        time.sleep(1)  # wait for 1 second
+        # Stop the robot
+        stop_msg = Twist()
+        self.publisher_.publish(stop_msg)
+        self.get_logger().info("Publishing cmd_vel: linear_x=0.0, angular_z=0.0")
+
+    #-------------------------------------------------------------------------------------------------------
     def loop(self):
         while rclpy.ok():
             linear_x = self.ask_float("Linear velocity (m/s): ")

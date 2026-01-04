@@ -25,7 +25,6 @@ def generate_launch_description():
             executable='control',
             name='robot_controller'),
         
-      
 
         Node(
             package='assignment2_rt',

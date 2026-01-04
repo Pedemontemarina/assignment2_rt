@@ -2,7 +2,8 @@ from collections import deque
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-from custom_message.srv import Average   
+from custom_message.srv import Average  
+from custom_message.msg import UserCommand 
 
 
 class AverageServer(Node):
@@ -21,9 +22,9 @@ class AverageServer(Node):
         self.get_logger().info("AverageServer ready.")
 
 
-    def velocity_callback(self, msg):
-        self.linear_queue.append(msg.linear.x)
-        self.angular_queue.append(msg.angular.z)
+    def velocity_callback(self, msg:UserCommand):
+        self.linear_queue.append(msg.cmd.linear.x)
+        self.angular_queue.append(msg.cmd.angular.z)
 
 
     def callback(self, request, response):
