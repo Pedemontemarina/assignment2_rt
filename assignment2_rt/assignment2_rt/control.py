@@ -41,7 +41,6 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from custom_message.srv import Threshold
 from custom_message.msg import Distance
-from custom_message.msg import UserCommand
 import time
 
 class Control(Node):
@@ -50,24 +49,27 @@ class Control(Node):
         super().__init__('control') # name of the node
         
         self.min_distance = float('inf')
-        self.min_index = -1
-        self.user_linear_velocity = None
-        self.user_angular_velocity = None
-        self.safe_position_x = None
-        self.safe_position_y = None
-        self.current_x = None
-        self.current_y = None
-        self.safepositioning_active = False
+        self.linear_velocity = 0.0
+        self.angular_velocity = 0.0
+        self.backup_active = False
 
 
         # laser scanner subscriber - to read the distances from obstacles
         self.subscription = self.create_subscription(LaserScan,'/scan',self.laser_callback,10)
         
-        # velocity subscriber to /cmd_user_vel - to get the input velocity of the robot
-        self.subscription = self.create_subscription(Twist,'/cmd_user_vel',self.safety_callback,10) 
+        # velocity subscriber - to get the position/velocity of the robot
+        self.subscription = self.create_subscription(Twist,'/cmd_vel',self.velocity_callback,10)
+        '''forse poi lo posso usare per tornare alla posizione precedente'''
+        # self.subscription = self.create_subscription(Twist,'/cmd_user_vel',self.velocity_callback,10) 
 
-        # odometry subscriber to /odom - to get the current position of the robot
-        self.subscription = self.create_subscription(Odometry,'/odom',self.odometry_callback,10)
+        #client to set threshold service
+        self.client = self.create_client(Threshold,'get_threshold')
+       
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for threshold service...")
+
+        self.threshold = self.threshold_service_call()
+        self.get_logger().info(f"Threshold received: {self.threshold}")
 
         # pubblisher to cmd_vel, to move the robot back to safe position
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
@@ -82,16 +84,6 @@ class Control(Node):
         #timer to run control loop
         control_timer_period = 0.1  # seconds
         self.control_timer = self.create_timer(control_timer_period, self.control_loop) 
-
-        #client to set threshold service
-        self.client = self.create_client(Threshold,'get_threshold')
-       
-        while not self.client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for threshold service...")
-
-        self.threshold = self.threshold_service_call()
-        self.get_logger().info(f"Threshold received: {self.threshold}")
-
       
 
     def threshold_service_call(self):
@@ -109,84 +101,75 @@ class Control(Node):
         min_index = msg.ranges.index(min_distance)
         self.min_distance = min_distance
         self.min_index = min_index
-
-    def safety_callback(self, msg: UserCommand):
-        # store the input velocity of the robot
-        self.user_linear_velocity = msg.cmd.linear.x
-        self.user_angular_velocity = msg.cmd.angular.z
-        self.safe_position_x = msg.safe_pose.x
-        self.safe_position_y = msg.safe_pose.y
     
-    def odometry_callback(self, msg):
-        # store the current position of the robot
-        self.current_x = msg.pose.pose.position.x
-        self.current_y = msg.pose.pose.position.y
+    def velocity_callback(self, msg):
+        # store the current velocity of the robot
+        current_velocity = msg
+        self.linear_velocity = current_velocity.linear.x
+        self.angular_velocity = current_velocity.angular.z
 
     
     def publish_obstacle_info(self):
         # publish info about the closest obstacle
         distance_msg = Distance()
         distance_msg.distance = self.min_distance
-        if self.min_index == -1: 
-            distance_msg.direction = "unknown"
-        else:
-            distance_msg.direction = define_direction_from_index(self.min_index)
-
+        distance_msg.direction = define_direction_from_index(self.min_index)
         distance_msg.threshold = self.threshold
         self.publisher_info.publish(distance_msg)
         # self.get_logger().info(f"Publishing obstacle info: distance={self.min_distance}, direction={distance_msg.direction}, threshold={self.threshold}")
     
     def control_loop(self):
-        
-        if self.min_index == -1:
-            return
 
-        if self.safepositioning_active:
+        if self.backup_active:
 
+            # Se la distanza è tornata sicura → esci dal backup
             if self.min_distance >= self.threshold:
                 self.get_logger().info("Safe distance restored, resuming normal control")
-                self.safepositioning_active = False
+                self.backup_active = False
+
                 # ferma il robot
                 twist = Twist()
                 self.publisher_.publish(twist)
                 return
 
-            # continue moving to safe position
+            # Altrimenti continua il backup
             twist = self.compute_backup_twist()
             self.publisher_.publish(twist)
             return
 
-        # safepositioning not active, check distance
+
+        # Se NON siamo in backup, controlliamo la distanza
         if self.min_distance < self.threshold:
-            self.get_logger().info("Obstacle too close, going back to safe position")
+            self.get_logger().info("Obstacle too close, starting backup maneuver")
 
-            self.safepositioning_active = True
+            # attiva il backup
+            self.backup_active = True
+
             twist = self.compute_backup_twist()
             self.publisher_.publish(twist)
             return
 
+            # Altrimenti → controllo normale (l’utente comanda)
+            # non pubblichi nulla, lasci passare i comandi dell’utente
+
+    
     def compute_backup_twist(self):
         twist = Twist()
+        direction = define_direction_from_index(self.min_index)
 
-        if self.current_x is None or self.current_y is None:
-            # stop if current position is unknown
-            return twist
+        if direction == "front":
+            twist.linear.x = -2.0      # ostacolo davanti → vai indietro
+        elif direction == "right":
+            twist.angular.z = 0.50      # ostacolo a destra → gira a sinistra
+        elif direction == "left":
+            twist.angular.z = -0.50     # ostacolo a sinistra → gira a destra
+        else:  # "unknown" → probabilmente dietro
+            twist.linear.x = 2.0     # ostacolo dietro → vai avanti
 
-        dx = self.safe_position_x - self.current_x
-        dy = self.safe_position_y - self.current_y
-        distance = (dx**2 + dy**2)**0.5
-
-        if distance < 0.05:
-            return twist
-
-        k = 0.5  # gain for proportional control
-
-        angle_to_goal = math.atan2(dy, dx)
-
-        twist.linear.x = k * distance
         return twist
 
         
+
 def define_direction_from_index(index):
     # define the direction of the obstacle from the index of the laser scan
     if index >= 0 and index < 180:
@@ -197,6 +180,7 @@ def define_direction_from_index(index):
         return "right"
     else:
         return "unknown"
+
 
 
 
