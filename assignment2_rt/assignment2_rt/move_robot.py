@@ -30,8 +30,6 @@ class MoveRobot(Node):
         self.user_publisher_ = self.create_publisher(Twist, '/cmd_user_vel', 10)
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
 
-
-        # potrei fare un client per ritornare la media dei 5 ultimi input 
         self.client = self.create_client(Average,'get_average')
 
         while not self.client.wait_for_service(timeout_sec=1.0): 
@@ -93,7 +91,6 @@ class MoveRobot(Node):
                 self.call_service()
 
             
-
 def main(args=None):
     rclpy.init(args=args)
     node = MoveRobot()

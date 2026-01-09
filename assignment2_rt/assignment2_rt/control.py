@@ -1,38 +1,3 @@
-'''if the users input causes the robot to be “too close” to one of the obstacles (e.g., the minimum value 
-of the laser scanner is below a certain threshold) moves the robot back to the previous position, to 
-remain in a safe area.
-
-The type of message exchanged in the /scan topic is sensor_msgs/msg/LaserScan
-
- 1. Angoli
-scansione a 360 gradi
-angle_min → angolo iniziale ( -3.14 rad)
-
-angle_max → angolo finale (es. +3.14 rad)
-
-angle_increment → passo tra una misura e la successiva 0.5rad
-il numero di misure sarà quindi:
-num_readings = (angle_max - angle_min) / angle_increment = 720
-
-2. Distanze
-msg.ranges --> array di 720 float
-ranges[] → array di float, uno per ogni raggio laser
-Esempio:
-ranges[0] = distanza a angle_min  
-ranges[1] = distanza a angle_min + angle_increment  
-…
-range_min: 0.05 m
-range_max: 10.0 m
-
-ranges[0] → distanza a -180° (dietro il robot)
-ranges[179] → distanza a -90° (sinistra del robot)
-ranges[360] → distanza a 0° (davanti al robot)
-ranges[540] → distanza a +90° (destra del robot)
-ranges[719] → distanza a +180° (dietro il robot)
-
-3. Intensità (opzionale)
-intensities[] → qualità del segnale
-'''
 
 import rclpy
 from rclpy.node import Node
@@ -49,18 +14,20 @@ class Control(Node):
         super().__init__('control') # name of the node
         
         self.min_distance = float('inf')
-        self.linear_velocity = 0.0
-        self.angular_velocity = 0.0
+        self.linear_velocity = None
+        self.angular_velocity = None
         self.backup_active = False
-
+        self.user_linear_velocity = 0.0
+        self.user_angular_velocity = 0.0
 
         # laser scanner subscriber - to read the distances from obstacles
         self.subscription = self.create_subscription(LaserScan,'/scan',self.laser_callback,10)
         
         # velocity subscriber - to get the position/velocity of the robot
         self.subscription = self.create_subscription(Twist,'/cmd_vel',self.velocity_callback,10)
-        '''forse poi lo posso usare per tornare alla posizione precedente'''
-        # self.subscription = self.create_subscription(Twist,'/cmd_user_vel',self.velocity_callback,10) 
+        
+        # user velocity subscriber - to get the user commands
+        self.user_subscription = self.create_subscription(Twist,'/cmd_user_vel',self.userinput_callback,10) 
 
         #client to set threshold service
         self.client = self.create_client(Threshold,'get_threshold')
@@ -107,6 +74,12 @@ class Control(Node):
         current_velocity = msg
         self.linear_velocity = current_velocity.linear.x
         self.angular_velocity = current_velocity.angular.z
+    
+    def userinput_callback(self, msg):
+        # store the user commanded velocity of the robot
+        user_velocity = msg
+        self.user_linear_velocity = user_velocity.linear.x
+        self.user_angular_velocity = user_velocity.angular.z
 
     
     def publish_obstacle_info(self):
@@ -116,56 +89,42 @@ class Control(Node):
         distance_msg.direction = define_direction_from_index(self.min_index)
         distance_msg.threshold = self.threshold
         self.publisher_info.publish(distance_msg)
-        # self.get_logger().info(f"Publishing obstacle info: distance={self.min_distance}, direction={distance_msg.direction}, threshold={self.threshold}")
     
     def control_loop(self):
 
         if self.backup_active:
 
-            # Se la distanza è tornata sicura → esci dal backup
             if self.min_distance >= self.threshold:
                 self.get_logger().info("Safe distance restored, resuming normal control")
                 self.backup_active = False
 
-                # ferma il robot
+                # stop the robot
                 twist = Twist()
                 self.publisher_.publish(twist)
                 return
 
-            # Altrimenti continua il backup
             twist = self.compute_backup_twist()
             self.publisher_.publish(twist)
             return
 
-
-        # Se NON siamo in backup, controlliamo la distanza
         if self.min_distance < self.threshold:
             self.get_logger().info("Obstacle too close, starting backup maneuver")
 
-            # attiva il backup
             self.backup_active = True
 
             twist = self.compute_backup_twist()
             self.publisher_.publish(twist)
             return
 
-            # Altrimenti → controllo normale (l’utente comanda)
-            # non pubblichi nulla, lasci passare i comandi dell’utente
 
     
     def compute_backup_twist(self):
         twist = Twist()
-        direction = define_direction_from_index(self.min_index)
-
-        if direction == "front":
-            twist.linear.x = -2.0      # ostacolo davanti → vai indietro
-        elif direction == "right":
-            twist.angular.z = 0.50      # ostacolo a destra → gira a sinistra
-        elif direction == "left":
-            twist.angular.z = -0.50     # ostacolo a sinistra → gira a destra
-        else:  # "unknown" → probabilmente dietro
-            twist.linear.x = 2.0     # ostacolo dietro → vai avanti
-
+        if self.linear_velocity is None or self.angular_velocity is None:
+            return twist  # no movement if no velocity info
+        
+        twist.linear.x = -self.user_linear_velocity
+        twist.angular.z = -self.user_angular_velocity
         return twist
 
         
