@@ -102,6 +102,7 @@ This node allows other components to analyze recent user inputs without interfer
 
 The threshold_server node provides a service that allows the user to set the safety distance threshold used for obstacle avoidance. When it is called, the node interactively asks the user to input a new threshold value via the terminal.
 The selected threshold is then returned to the requesting node and used to determine when an obstacle is considered too close. 
+
 ---
 ## 6. Requirements
 
