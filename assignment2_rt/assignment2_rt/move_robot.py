@@ -1,20 +1,3 @@
-''' this node allows the user to move the robt using inputs
-The command should be sent for 1 second, and then the robot should
-stop, and the user should be able again to insert the command.
-
-We need to understand the type of message exchanged and wich topic to use.
-- Topic: /cmd_vel
-- Message type: geometry_msgs/msg/Twist
-
-- Start the class MoveRobot that inherits from Node
-- Create a publisher to the topic /cmd_vel with message type Twist
-- Create a loop function, read from the terminal the command and publish the corresponding Twist message
-- After publishing the command, publish a zero Twist message to stop the robot after 1 second.
-
-This robot movement controller is very simple, it only accepts linear velocity in x direction and angular velocity in z direction.
-
-'''
-
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
