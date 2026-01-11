@@ -6,6 +6,7 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from custom_message.srv import Threshold
 from custom_message.msg import Distance
+from custom_message.srv import FixPoint
 import time
 
 class Control(Node):
@@ -19,6 +20,8 @@ class Control(Node):
         self.backup_active = False
         self.user_linear_velocity = 0.0
         self.user_angular_velocity = 0.0
+        self.fixed_x = 0.0
+        self.fixed_y = 0.0
 
         # laser scanner subscriber - to read the distances from obstacles
         self.subscription = self.create_subscription(LaserScan,'/scan',self.laser_callback,10)
@@ -43,7 +46,22 @@ class Control(Node):
 
         # publisher to custom message with info about obstacle avoidance
         self.publisher_info = self.create_publisher(Distance, '/obstacle_info', 10)
-        
+
+        #-----------------------------------------------------------------------------
+        # exam
+        self.client = self.create_client(FixPoint,'get_point')
+
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for fixed point service...")
+
+        self.fixed_x,self.fixed_y = self.getpoint_service_call()
+        self.get_logger().info(f"Point received: x={self.fixed_x}, y={self.fixed_y}")
+
+
+        self.subscriber_fixed = self.create_subscription(Odometry,'/odom',self.publish_fixed_obstacle_distance,10)
+        self.publisher_fix = self.create_publisher(Distance, '/obstacle_info_fixed', 10)
+        #--------------------------------------------------------------------------------------
+
         # timer to publish obstacle info at regular intervals
         timer_period = 1.0  # seconds
         self.timer = self.create_timer(timer_period, self.publish_obstacle_info)
@@ -52,6 +70,13 @@ class Control(Node):
         control_timer_period = 0.1  # seconds
         self.control_timer = self.create_timer(control_timer_period, self.control_loop) 
       
+    def getpoint_service_call(self):
+        req = FixPoint.Request()
+        future = self.client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        response = future.result()
+        return response.x, response.y
+
 
     def threshold_service_call(self):
         # call the service to set the threshold
@@ -89,7 +114,18 @@ class Control(Node):
         distance_msg.direction = define_direction_from_index(self.min_index)
         distance_msg.threshold = self.threshold
         self.publisher_info.publish(distance_msg)
-    
+
+    def publish_fixed_obstacle_distance(self,msg:Odometry):
+        self.x = msg.pose.pose.position.x
+        self.y = msg.pose.pose.position.y
+        dx = self.fixed_x - self.x
+        dy = self.fixed_y - self.y
+        distance = (dx**2 + dy**2)**0.5
+        msg_dist = Distance()
+        msg_dist.distance = distance
+        self.publisher_fix.publish(msg_dist)
+        
+
     def control_loop(self):
 
         if self.backup_active:
