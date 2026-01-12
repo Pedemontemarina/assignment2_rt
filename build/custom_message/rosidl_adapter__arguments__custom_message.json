@@ -1,0 +1,9 @@
+{
+  "package_name": "custom_message",
+  "non_idl_tuples": [
+    "/home/ubuntu/ws/src/custom_message:msg/Distance.msg",
+    "/home/ubuntu/ws/src/custom_message:srv/Threshold.srv",
+    "/home/ubuntu/ws/src/custom_message:srv/Average.srv",
+    "/home/ubuntu/ws/src/custom_message:srv/FixPoint.srv"
+  ]
+}

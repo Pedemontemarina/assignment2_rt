@@ -1,0 +1,24 @@
+running egg_info
+writing ../build/assignment2_rt/assignment2_rt.egg-info/PKG-INFO
+writing dependency_links to ../build/assignment2_rt/assignment2_rt.egg-info/dependency_links.txt
+writing entry points to ../build/assignment2_rt/assignment2_rt.egg-info/entry_points.txt
+writing requirements to ../build/assignment2_rt/assignment2_rt.egg-info/requires.txt
+writing top-level names to ../build/assignment2_rt/assignment2_rt.egg-info/top_level.txt
+reading manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+writing manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/launch.py -> /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/launch
+running install_egg_info
+removing '/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/assignment2_rt/assignment2_rt.egg-info to /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt-0.0.0-py3.12.egg-info
+running install_scripts
+Installing average_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing control script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing fixpoint_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing move_robot script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing threshold_service script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+writing list of installed files to '/home/ubuntu/ws/src/build/assignment2_rt/install.log'

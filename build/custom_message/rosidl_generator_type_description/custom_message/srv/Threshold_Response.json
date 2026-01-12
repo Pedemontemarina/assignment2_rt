@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "custom_message/srv/Threshold_Response",
+      "fields": [
+        {
+          "name": "threshold",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "custom_message/srv/Threshold_Response",
+      "hash_string": "RIHS01_3115cca45068beb839384e36d9490d9e76843fcebeb3890695dc1030802a26bf"
+    }
+  ]
+}

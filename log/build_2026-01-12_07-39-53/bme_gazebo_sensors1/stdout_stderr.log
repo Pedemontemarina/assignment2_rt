@@ -1,0 +1,61 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/ws/src/build/bme_gazebo_sensors1
+-- Install configuration: ""
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/launch
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/launch/spawn_robot.launch.py
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/launch/world.launch.py
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/worlds
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/worlds/my.sdf
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/worlds/home.sdf
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/worlds/my_world.sdf
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/worlds/world.sdf
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/rviz
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/rviz/gps.rviz
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/rviz/urdf.rviz
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/rviz/rviz.rviz
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/urdf
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/urdf/mogi_bot.gazebo
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/urdf/materials.xacro
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/urdf/mogi_bot.urdf
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/meshes
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/meshes/lidar.dae
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/meshes/wheel.dae
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/meshes/mogi_bot.dae
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/config
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/config/ekf.yaml
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/ament_index/resource_index/package_run_dependencies/bme_gazebo_sensors1
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/ament_index/resource_index/parent_prefix_path/bme_gazebo_sensors1
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/environment/ament_prefix_path.sh
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/environment/ament_prefix_path.dsv
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/environment/path.sh
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/environment/path.dsv
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/local_setup.bash
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/local_setup.sh
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/local_setup.zsh
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/local_setup.dsv
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.dsv
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/ament_index/resource_index/packages/bme_gazebo_sensors1
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/cmake/bme_gazebo_sensors1Config.cmake
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/cmake/bme_gazebo_sensors1Config-version.cmake
+-- Installing: /home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.xml

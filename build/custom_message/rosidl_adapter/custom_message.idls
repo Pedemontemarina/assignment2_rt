@@ -1,0 +1,4 @@
+/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:msg/Distance.idl
+/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:srv/Threshold.idl
+/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:srv/Average.idl
+/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:srv/FixPoint.idl

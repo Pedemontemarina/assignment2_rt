@@ -1,0 +1,349 @@
+[0.025s] Invoking command in '/home/ubuntu/ws/src/build/custom_message': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/ws/src/custom_message -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ws/src/install/custom_message
+[0.217s] -- The C compiler identification is GNU 13.3.0
+[0.316s] -- The CXX compiler identification is GNU 13.3.0
+[0.339s] -- Detecting C compiler ABI info
+[0.427s] -- Detecting C compiler ABI info - done
+[0.434s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.434s] -- Detecting C compile features
+[0.435s] -- Detecting C compile features - done
+[0.443s] -- Detecting CXX compiler ABI info
+[0.522s] -- Detecting CXX compiler ABI info - done
+[0.529s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.529s] -- Detecting CXX compile features
+[0.529s] -- Detecting CXX compile features - done
+[0.566s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.690s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.835s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.847s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.938s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.007s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.015s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.526s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.846s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.249s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.256s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.356s] -- Found PythonExtra: /usr/bin/python3  
+[2.762s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.793s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.831s] -- Added test 'lint_cmake' to check CMake code style
+[2.832s] -- Added test 'xmllint' to check XML markup files
+[2.834s] -- Configuring done (2.7s)
+[2.878s] -- Generating done (0.0s)
+[2.887s] -- Build files have been written to: /home/ubuntu/ws/src/build/custom_message
+[2.895s] Invoked command in '/home/ubuntu/ws/src/build/custom_message' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/ws/src/custom_message -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ws/src/install/custom_message
+[2.896s] Invoking command in '/home/ubuntu/ws/src/build/custom_message': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ws/src/build/custom_message -- -j22 -l22
+[2.939s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.947s] [  1%] Built target ament_cmake_python_copy_custom_message
+[3.092s] running egg_info
+[3.092s] creating custom_message.egg-info
+[3.103s] writing custom_message.egg-info/PKG-INFO
+[3.103s] writing dependency_links to custom_message.egg-info/dependency_links.txt
+[3.103s] writing top-level names to custom_message.egg-info/top_level.txt
+[3.103s] writing manifest file 'custom_message.egg-info/SOURCES.txt'
+[3.120s] [  1%] Built target custom_message__rosidl_generator_type_description
+[3.130s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.136s] reading manifest file 'custom_message.egg-info/SOURCES.txt'
+[3.137s] writing manifest file 'custom_message.egg-info/SOURCES.txt'
+[3.140s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.164s] [  4%] Built target ament_cmake_python_build_custom_message_egg
+[3.450s] [  4%] Built target custom_message__cpp
+[3.506s] [  6%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/threshold__description.c.o[0m
+[3.506s] [  7%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/msg/detail/distance__functions.c.o[0m
+[3.507s] [ 10%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/msg/detail/distance__description.c.o[0m
+[3.507s] [ 10%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/msg/detail/distance__type_support.c.o[0m
+[3.507s] [ 12%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/threshold__functions.c.o[0m
+[3.509s] [ 14%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/average__description.c.o[0m
+[3.509s] [ 15%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/threshold__type_support.c.o[0m
+[3.512s] [ 17%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/average__functions.c.o[0m
+[3.512s] [ 18%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/fix_point__functions.c.o[0m
+[3.512s] [ 20%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/fix_point__type_support.c.o[0m
+[3.512s] [ 23%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/fix_point__description.c.o[0m
+[3.512s] [ 23%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_c.dir/rosidl_generator_c/custom_message/srv/detail/average__type_support.c.o[0m
+[3.602s] [ 25%] [32m[1mLinking C shared library libcustom_message__rosidl_generator_c.so[0m
+[3.636s] [ 25%] Built target custom_message__rosidl_generator_c
+[3.646s] [ 26%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.647s] [ 28%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.647s] [ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.648s] [ 31%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.648s] [ 32%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.648s] [ 34%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.906s] [ 39%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_message/srv/threshold__type_support.cpp.o[0m
+[3.906s] [ 39%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_message/srv/fix_point__type_support.cpp.o[0m
+[3.906s] [ 39%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_message/msg/distance__type_support.cpp.o[0m
+[3.906s] [ 40%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_message/srv/average__type_support.cpp.o[0m
+[3.946s] [ 43%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_message/msg/distance__type_support.cpp.o[0m
+[3.946s] [ 43%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_message/srv/average__type_support.cpp.o[0m
+[3.948s] [ 45%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_message/srv/fix_point__type_support.cpp.o[0m
+[3.950s] [ 46%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_message/srv/threshold__type_support.cpp.o[0m
+[3.961s] [ 48%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_message/msg/detail/distance__type_support.cpp.o[0m
+[3.963s] [ 50%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_message/srv/detail/threshold__type_support.cpp.o[0m
+[3.963s] [ 51%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_message/srv/detail/fix_point__type_support.cpp.o[0m
+[3.963s] [ 53%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_message/srv/detail/average__type_support.cpp.o[0m
+[3.982s] [ 57%] [32mBuilding C object CMakeFiles/custom_message__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_message/srv/detail/average__type_support.c.o[0m
+[3.983s] [ 57%] [32m[1mLinking CXX shared library libcustom_message__rosidl_typesupport_c.so[0m
+[3.983s] [ 57%] [32mBuilding C object CMakeFiles/custom_message__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_message/msg/detail/distance__type_support.c.o[0m
+[3.985s] [ 59%] [32mBuilding C object CMakeFiles/custom_message__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_message/srv/detail/fix_point__type_support.c.o[0m
+[3.986s] [ 60%] [32mBuilding C object CMakeFiles/custom_message__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_message/srv/detail/threshold__type_support.c.o[0m
+[4.047s] [ 60%] Built target custom_message__rosidl_typesupport_c
+[4.047s] [ 62%] [32m[1mLinking C shared library libcustom_message__rosidl_typesupport_introspection_c.so[0m
+[4.103s] [ 62%] Built target custom_message__rosidl_typesupport_introspection_c
+[4.105s] [ 64%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_message/msg/detail/dds_fastrtps/distance__type_support.cpp.o[0m
+[4.105s] [ 67%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_message/srv/detail/dds_fastrtps/threshold__type_support.cpp.o[0m
+[4.106s] [ 67%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_message/srv/detail/dds_fastrtps/average__type_support.cpp.o[0m
+[4.107s] [ 68%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_message/srv/detail/dds_fastrtps/fix_point__type_support.cpp.o[0m
+[4.194s] [ 70%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_message/srv/detail/fix_point__type_support_c.cpp.o[0m
+[4.194s] [ 73%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_message/srv/detail/threshold__type_support_c.cpp.o[0m
+[4.194s] [ 75%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_message/msg/detail/distance__type_support_c.cpp.o[0m
+[4.194s] [ 75%] [32mBuilding CXX object CMakeFiles/custom_message__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_message/srv/detail/average__type_support_c.cpp.o[0m
+[4.552s] [ 76%] [32m[1mLinking CXX shared library libcustom_message__rosidl_typesupport_cpp.so[0m
+[4.597s] [ 78%] [32m[1mLinking CXX shared library libcustom_message__rosidl_typesupport_introspection_cpp.so[0m
+[4.667s] [ 78%] Built target custom_message__rosidl_typesupport_cpp
+[4.707s] [ 78%] Built target custom_message__rosidl_typesupport_introspection_cpp
+[4.845s] [ 79%] [32m[1mLinking CXX shared library libcustom_message__rosidl_typesupport_fastrtps_c.so[0m
+[4.911s] [ 81%] [32m[1mLinking CXX shared library libcustom_message__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.912s] [ 81%] Built target custom_message__rosidl_typesupport_fastrtps_c
+[4.974s] [ 81%] Built target custom_message__rosidl_typesupport_fastrtps_cpp
+[4.993s] [ 81%] Built target custom_message
+[5.011s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.500s] [ 82%] Built target custom_message__py
+[5.522s] [ 87%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_py.dir/rosidl_generator_py/custom_message/msg/_distance_s.c.o[0m
+[5.523s] [ 87%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_py.dir/rosidl_generator_py/custom_message/srv/_fix_point_s.c.o[0m
+[5.523s] [ 87%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_py.dir/rosidl_generator_py/custom_message/srv/_average_s.c.o[0m
+[5.523s] [ 89%] [32mBuilding C object CMakeFiles/custom_message__rosidl_generator_py.dir/rosidl_generator_py/custom_message/srv/_threshold_s.c.o[0m
+[5.812s] [ 90%] [32m[1mLinking C shared library libcustom_message__rosidl_generator_py.so[0m
+[5.861s] [ 90%] Built target custom_message__rosidl_generator_py
+[5.885s] [ 92%] [32mBuilding C object CMakeFiles/custom_message_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_message/_custom_message_s.ep.rosidl_typesupport_c.c.o[0m
+[5.885s] [ 93%] [32mBuilding C object CMakeFiles/custom_message_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_message/_custom_message_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.887s] [ 95%] [32mBuilding C object CMakeFiles/custom_message_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_message/_custom_message_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[6.005s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/custom_message/custom_message_s__rosidl_typesupport_c.so[0m
+[6.008s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/custom_message/custom_message_s__rosidl_typesupport_introspection_c.so[0m
+[6.010s] [100%] [32m[1mLinking C shared module rosidl_generator_py/custom_message/custom_message_s__rosidl_typesupport_fastrtps_c.so[0m
+[6.037s] [100%] Built target custom_message_s__rosidl_typesupport_c
+[6.037s] [100%] Built target custom_message_s__rosidl_typesupport_introspection_c
+[6.037s] [100%] Built target custom_message_s__rosidl_typesupport_fastrtps_c
+[6.049s] Invoked command in '/home/ubuntu/ws/src/build/custom_message' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ws/src/build/custom_message -- -j22 -l22
+[6.050s] Invoking command in '/home/ubuntu/ws/src/build/custom_message': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ws/src/build/custom_message
+[6.058s] -- Install configuration: ""
+[6.058s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/ament_index/resource_index/rosidl_interfaces/custom_message
+[6.059s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/msg/Distance.json
+[6.059s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/Threshold.json
+[6.059s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/Average.json
+[6.059s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/FixPoint.json
+[6.059s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message
+[6.060s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv
+[6.060s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail
+[6.060s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__description.c
+[6.060s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__type_support.c
+[6.061s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__type_support.c
+[6.061s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__struct.h
+[6.061s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__functions.c
+[6.061s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__type_support.c
+[6.061s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__type_support.h
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__description.c
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__struct.h
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__description.c
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__type_support.h
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__functions.c
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__type_support.h
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__functions.h
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__functions.c
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__functions.h
+[6.062s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__struct.h
+[6.063s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__functions.h
+[6.063s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/average.h
+[6.063s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/threshold.h
+[6.063s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/fix_point.h
+[6.063s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg
+[6.063s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail
+[6.064s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__functions.c
+[6.064s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__functions.h
+[6.064s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__type_support.c
+[6.064s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__description.c
+[6.064s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__type_support.h
+[6.064s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__struct.h
+[6.065s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/distance.h
+[6.065s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/rosidl_generator_c__visibility_control.h
+[6.065s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/library_path.sh
+[6.065s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/library_path.dsv
+[6.065s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_generator_c.so
+[6.066s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_generator_c.so" to ""
+[6.066s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message
+[6.066s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv
+[6.066s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail
+[6.066s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__rosidl_typesupport_fastrtps_c.h
+[6.066s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__rosidl_typesupport_fastrtps_c.h
+[6.067s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__rosidl_typesupport_fastrtps_c.h
+[6.067s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg
+[6.067s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail
+[6.067s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__rosidl_typesupport_fastrtps_c.h
+[6.067s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.067s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_fastrtps_c.so
+[6.067s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_fastrtps_c.so" to ""
+[6.067s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message
+[6.067s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv
+[6.067s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail
+[6.068s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__type_support.c
+[6.068s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__rosidl_typesupport_introspection_c.h
+[6.068s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__type_support.c
+[6.068s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__type_support.c
+[6.068s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__rosidl_typesupport_introspection_c.h
+[6.069s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__rosidl_typesupport_introspection_c.h
+[6.069s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg
+[6.069s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.069s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail
+[6.069s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__type_support.c
+[6.069s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__rosidl_typesupport_introspection_c.h
+[6.069s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_introspection_c.so
+[6.069s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_introspection_c.so" to ""
+[6.069s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_c.so
+[6.069s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_c.so" to ""
+[6.070s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message
+[6.070s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv
+[6.070s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/threshold.hpp
+[6.070s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/fix_point.hpp
+[6.070s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail
+[6.070s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__type_support.hpp
+[6.070s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__struct.hpp
+[6.071s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__struct.hpp
+[6.071s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__builder.hpp
+[6.071s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__builder.hpp
+[6.071s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__traits.hpp
+[6.071s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__type_support.hpp
+[6.071s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__type_support.hpp
+[6.072s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__struct.hpp
+[6.072s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__traits.hpp
+[6.072s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__builder.hpp
+[6.072s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__traits.hpp
+[6.072s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/average.hpp
+[6.072s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg
+[6.073s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.073s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/distance.hpp
+[6.073s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail
+[6.073s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__struct.hpp
+[6.073s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__type_support.hpp
+[6.073s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__builder.hpp
+[6.073s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__traits.hpp
+[6.073s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message
+[6.073s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv
+[6.074s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail
+[6.074s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/dds_fastrtps
+[6.074s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__rosidl_typesupport_fastrtps_cpp.hpp
+[6.074s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__rosidl_typesupport_fastrtps_cpp.hpp
+[6.074s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__rosidl_typesupport_fastrtps_cpp.hpp
+[6.074s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg
+[6.075s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail
+[6.075s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/dds_fastrtps
+[6.075s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__rosidl_typesupport_fastrtps_cpp.hpp
+[6.075s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.075s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_fastrtps_cpp.so
+[6.076s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_fastrtps_cpp.so" to ""
+[6.076s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message
+[6.076s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv
+[6.076s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail
+[6.076s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__rosidl_typesupport_introspection_cpp.hpp
+[6.076s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__rosidl_typesupport_introspection_cpp.hpp
+[6.076s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/threshold__type_support.cpp
+[6.076s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__type_support.cpp
+[6.076s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/fix_point__type_support.cpp
+[6.077s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/srv/detail/average__rosidl_typesupport_introspection_cpp.hpp
+[6.077s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg
+[6.077s] -- Up-to-date: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail
+[6.077s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__type_support.cpp
+[6.077s] -- Installing: /home/ubuntu/ws/src/install/custom_message/include/custom_message/custom_message/msg/detail/distance__rosidl_typesupport_introspection_cpp.hpp
+[6.077s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_introspection_cpp.so
+[6.077s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_introspection_cpp.so" to ""
+[6.078s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_cpp.so
+[6.078s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_typesupport_cpp.so" to ""
+[6.078s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/pythonpath.sh
+[6.078s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/pythonpath.dsv
+[6.078s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message-0.0.0-py3.12.egg-info
+[6.078s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message-0.0.0-py3.12.egg-info/PKG-INFO
+[6.079s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message-0.0.0-py3.12.egg-info/SOURCES.txt
+[6.079s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message-0.0.0-py3.12.egg-info/dependency_links.txt
+[6.079s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message-0.0.0-py3.12.egg-info/top_level.txt
+[6.079s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/_custom_message_s.ep.rosidl_typesupport_c.c
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/__init__.py
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_c.so
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_average.py
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_threshold.py
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_fix_point.py
+[6.080s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_threshold_s.c
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/__init__.py
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_fix_point_s.c
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_average_s.c
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/_custom_message_s.ep.rosidl_typesupport_introspection_c.c
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/msg
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/msg/_distance_s.c
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/msg/_distance.py
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/msg/__init__.py
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/_custom_message_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_fastrtps_c.so
+[6.081s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_introspection_c.so
+[6.120s] Listing '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message'...
+[6.120s] Compiling '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/__init__.py'...
+[6.120s] Listing '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/msg'...
+[6.120s] Compiling '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/msg/__init__.py'...
+[6.120s] Compiling '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/msg/_distance.py'...
+[6.120s] Listing '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv'...
+[6.120s] Compiling '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/__init__.py'...
+[6.121s] Compiling '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_average.py'...
+[6.121s] Compiling '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_fix_point.py'...
+[6.121s] Compiling '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/srv/_threshold.py'...
+[6.125s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_fastrtps_c.so
+[6.126s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_fastrtps_c.so" to ""
+[6.126s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_introspection_c.so
+[6.126s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_introspection_c.so" to ""
+[6.126s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_c.so
+[6.127s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages/custom_message/custom_message_s__rosidl_typesupport_c.so" to ""
+[6.127s] -- Installing: /home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_generator_py.so
+[6.127s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/ws/src/install/custom_message/lib/libcustom_message__rosidl_generator_py.so" to ""
+[6.127s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/msg/Distance.idl
+[6.127s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/Threshold.idl
+[6.128s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/Average.idl
+[6.128s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/FixPoint.idl
+[6.128s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/msg/Distance.msg
+[6.128s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/Threshold.srv
+[6.128s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/Average.srv
+[6.128s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/srv/FixPoint.srv
+[6.129s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/ament_index/resource_index/package_run_dependencies/custom_message
+[6.129s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/ament_index/resource_index/parent_prefix_path/custom_message
+[6.129s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/ament_prefix_path.sh
+[6.129s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/ament_prefix_path.dsv
+[6.129s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/path.sh
+[6.130s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/environment/path.dsv
+[6.130s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/local_setup.bash
+[6.130s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/local_setup.sh
+[6.130s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/local_setup.zsh
+[6.130s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/local_setup.dsv
+[6.130s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/package.dsv
+[6.130s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/ament_index/resource_index/packages/custom_message
+[6.131s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_generator_cExport.cmake
+[6.131s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_generator_cExport-noconfig.cmake
+[6.131s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_typesupport_fastrtps_cExport.cmake
+[6.131s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.131s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_introspection_cExport.cmake
+[6.131s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.132s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_cExport.cmake
+[6.132s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_cExport-noconfig.cmake
+[6.132s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_generator_cppExport.cmake
+[6.132s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.132s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.132s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_introspection_cppExport.cmake
+[6.133s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.133s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_cppExport.cmake
+[6.133s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_message__rosidl_typesupport_cppExport-noconfig.cmake
+[6.133s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_generator_pyExport.cmake
+[6.134s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/export_custom_message__rosidl_generator_pyExport-noconfig.cmake
+[6.134s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/rosidl_cmake-extras.cmake
+[6.134s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.134s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.134s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/ament_cmake_export_libraries-extras.cmake
+[6.134s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/ament_cmake_export_targets-extras.cmake
+[6.135s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.135s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.135s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_messageConfig.cmake
+[6.135s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/cmake/custom_messageConfig-version.cmake
+[6.135s] -- Installing: /home/ubuntu/ws/src/install/custom_message/share/custom_message/package.xml
+[6.137s] Invoked command in '/home/ubuntu/ws/src/build/custom_message' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ws/src/build/custom_message

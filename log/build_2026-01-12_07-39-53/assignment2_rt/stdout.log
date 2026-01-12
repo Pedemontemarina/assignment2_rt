@@ -1,0 +1,53 @@
+running egg_info
+creating ../build/assignment2_rt/assignment2_rt.egg-info
+writing ../build/assignment2_rt/assignment2_rt.egg-info/PKG-INFO
+writing dependency_links to ../build/assignment2_rt/assignment2_rt.egg-info/dependency_links.txt
+writing entry points to ../build/assignment2_rt/assignment2_rt.egg-info/entry_points.txt
+writing requirements to ../build/assignment2_rt/assignment2_rt.egg-info/requires.txt
+writing top-level names to ../build/assignment2_rt/assignment2_rt.egg-info/top_level.txt
+writing manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+reading manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+writing manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ubuntu/ws/src/build/assignment2_rt/build
+creating /home/ubuntu/ws/src/build/assignment2_rt/build/lib
+creating /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+copying assignment2_rt/move_robot.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+copying assignment2_rt/average_server.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+copying assignment2_rt/control.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+copying assignment2_rt/__init__.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+copying assignment2_rt/fixpoint_server.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+copying assignment2_rt/threshold_service.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+running install
+running install_lib
+creating /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/move_robot.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/average_server.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/control.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/__init__.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/fixpoint_server.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/threshold_service.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/move_robot.py to move_robot.cpython-312.pyc
+byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/average_server.py to average_server.cpython-312.pyc
+byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/control.py to control.cpython-312.pyc
+byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/fixpoint_server.py to fixpoint_server.cpython-312.pyc
+byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/threshold_service.py to threshold_service.cpython-312.pyc
+running install_data
+creating /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index
+creating /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index/resource_index
+creating /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index/resource_index/packages
+copying resource/assignment2_rt -> /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt
+creating /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/launch
+copying launch/launch.py -> /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/launch
+running install_egg_info
+Copying ../build/assignment2_rt/assignment2_rt.egg-info to /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt-0.0.0-py3.12.egg-info
+running install_scripts
+Installing average_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing control script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing fixpoint_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing move_robot script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+Installing threshold_service script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+writing list of installed files to '/home/ubuntu/ws/src/build/assignment2_rt/install.log'

@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from custom_message/srv/Average.srv
+// generated code does not contain a copyright notice
+
+
+module custom_message {
+  module srv {
+    struct Average_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct Average_Response {
+      double avg_linear;
+
+      double avg_angular;
+    };
+  };
+};

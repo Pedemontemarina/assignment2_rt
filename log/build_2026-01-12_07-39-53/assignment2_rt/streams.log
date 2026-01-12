@@ -1,0 +1,55 @@
+[0.797s] Invoking command in '/home/ubuntu/ws/src/assignment2_rt': AMENT_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ubuntu/ws/src/install/custom_message/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/ws/src/build/assignment2_rt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment2_rt build --build-base /home/ubuntu/ws/src/build/assignment2_rt/build install --record /home/ubuntu/ws/src/build/assignment2_rt/install.log --single-version-externally-managed install_data
+[0.966s] running egg_info
+[0.966s] creating ../build/assignment2_rt/assignment2_rt.egg-info
+[0.978s] writing ../build/assignment2_rt/assignment2_rt.egg-info/PKG-INFO
+[0.978s] writing dependency_links to ../build/assignment2_rt/assignment2_rt.egg-info/dependency_links.txt
+[0.978s] writing entry points to ../build/assignment2_rt/assignment2_rt.egg-info/entry_points.txt
+[0.979s] writing requirements to ../build/assignment2_rt/assignment2_rt.egg-info/requires.txt
+[0.979s] writing top-level names to ../build/assignment2_rt/assignment2_rt.egg-info/top_level.txt
+[0.979s] writing manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+[1.001s] reading manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+[1.001s] writing manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+[1.002s] running build
+[1.002s] running build_py
+[1.002s] creating /home/ubuntu/ws/src/build/assignment2_rt/build
+[1.002s] creating /home/ubuntu/ws/src/build/assignment2_rt/build/lib
+[1.002s] creating /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+[1.002s] copying assignment2_rt/move_robot.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+[1.003s] copying assignment2_rt/average_server.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+[1.003s] copying assignment2_rt/control.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+[1.004s] copying assignment2_rt/__init__.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+[1.004s] copying assignment2_rt/fixpoint_server.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+[1.004s] copying assignment2_rt/threshold_service.py -> /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt
+[1.005s] running install
+[1.009s] running install_lib
+[1.019s] creating /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+[1.020s] copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/move_robot.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+[1.020s] copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/average_server.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+[1.020s] copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/control.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+[1.020s] copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/__init__.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+[1.021s] copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/fixpoint_server.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+[1.021s] copying /home/ubuntu/ws/src/build/assignment2_rt/build/lib/assignment2_rt/threshold_service.py -> /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt
+[1.021s] byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/move_robot.py to move_robot.cpython-312.pyc
+[1.022s] byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/average_server.py to average_server.cpython-312.pyc
+[1.022s] byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/control.py to control.cpython-312.pyc
+[1.023s] byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/__init__.py to __init__.cpython-312.pyc
+[1.023s] byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/fixpoint_server.py to fixpoint_server.cpython-312.pyc
+[1.024s] byte-compiling /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt/threshold_service.py to threshold_service.cpython-312.pyc
+[1.024s] running install_data
+[1.024s] creating /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index
+[1.024s] creating /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index/resource_index
+[1.024s] creating /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index/resource_index/packages
+[1.025s] copying resource/assignment2_rt -> /home/ubuntu/ws/src/install/assignment2_rt/share/ament_index/resource_index/packages
+[1.025s] copying package.xml -> /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt
+[1.025s] creating /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/launch
+[1.025s] copying launch/launch.py -> /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/launch
+[1.026s] running install_egg_info
+[1.039s] Copying ../build/assignment2_rt/assignment2_rt.egg-info to /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt-0.0.0-py3.12.egg-info
+[1.040s] running install_scripts
+[1.121s] Installing average_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[1.122s] Installing control script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[1.122s] Installing fixpoint_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[1.122s] Installing move_robot script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[1.122s] Installing threshold_service script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[1.122s] writing list of installed files to '/home/ubuntu/ws/src/build/assignment2_rt/install.log'
+[1.145s] Invoked command in '/home/ubuntu/ws/src/assignment2_rt' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ubuntu/ws/src/install/custom_message/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/ws/src/build/assignment2_rt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment2_rt build --build-base /home/ubuntu/ws/src/build/assignment2_rt/build install --record /home/ubuntu/ws/src/build/assignment2_rt/install.log --single-version-externally-managed install_data

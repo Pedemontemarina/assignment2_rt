@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from custom_message/srv/FixPoint.srv
+// generated code does not contain a copyright notice
+
+
+module custom_message {
+  module srv {
+    struct FixPoint_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct FixPoint_Response {
+      double x;
+
+      double y;
+    };
+  };
+};

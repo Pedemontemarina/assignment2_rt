@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from custom_message/srv/Threshold.srv
+// generated code does not contain a copyright notice
+
+
+module custom_message {
+  module srv {
+    struct Threshold_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct Threshold_Response {
+      double threshold;
+    };
+  };
+};

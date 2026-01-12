@@ -1,0 +1,12 @@
+from custom_message.srv._average import Average  # noqa: F401
+from custom_message.srv._average import Average_Event  # noqa: F401
+from custom_message.srv._average import Average_Request  # noqa: F401
+from custom_message.srv._average import Average_Response  # noqa: F401
+from custom_message.srv._fix_point import FixPoint  # noqa: F401
+from custom_message.srv._fix_point import FixPoint_Event  # noqa: F401
+from custom_message.srv._fix_point import FixPoint_Request  # noqa: F401
+from custom_message.srv._fix_point import FixPoint_Response  # noqa: F401
+from custom_message.srv._threshold import Threshold  # noqa: F401
+from custom_message.srv._threshold import Threshold_Event  # noqa: F401
+from custom_message.srv._threshold import Threshold_Request  # noqa: F401
+from custom_message.srv._threshold import Threshold_Response  # noqa: F401

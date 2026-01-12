@@ -1,0 +1,8 @@
+msg/Distance.idl
+msg/Distance.msg
+srv/Average.idl
+srv/Average.srv
+srv/FixPoint.idl
+srv/FixPoint.srv
+srv/Threshold.idl
+srv/Threshold.srv

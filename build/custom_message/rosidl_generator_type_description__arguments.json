@@ -1,0 +1,14 @@
+{
+  "package_name": "custom_message",
+  "output_dir": "/home/ubuntu/ws/src/build/custom_message/rosidl_generator_type_description/custom_message",
+  "idl_tuples": [
+    "/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:msg/Distance.idl",
+    "/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:srv/Threshold.idl",
+    "/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:srv/Average.idl",
+    "/home/ubuntu/ws/src/build/custom_message/rosidl_adapter/custom_message:srv/FixPoint.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

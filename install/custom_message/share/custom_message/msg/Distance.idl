@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from custom_message/msg/Distance.msg
+// generated code does not contain a copyright notice
+
+
+module custom_message {
+  module msg {
+    @verbatim (language="comment", text=
+      "Distance of the closest detected obstacle (in meters)")
+    struct Distance {
+      float distance;
+
+      @verbatim (language="comment", text=
+        "Direction of the obstacle relative to the robot" "\n"
+        "Allowed values: \"left\", \"front\", \"right\"")
+      string direction;
+
+      @verbatim (language="comment", text=
+        "Safety threshold used for comparison (in meters)")
+      float threshold;
+    };
+  };
+};

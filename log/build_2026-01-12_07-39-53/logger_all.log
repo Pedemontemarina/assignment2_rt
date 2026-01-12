@@ -1,0 +1,259 @@
+[0.293s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.293s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=22, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x745b9d265d90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x745b9d3bdf70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x745b9d3bdf70>>, mixin_verb=('build',))
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.355s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.356s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.356s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.357s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/ws/src'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extensions ['ignore', 'ignore_ament_install']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extension 'ignore'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extension 'ignore_ament_install'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extensions ['colcon_pkg']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extension 'colcon_pkg'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extensions ['colcon_meta']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extension 'colcon_meta'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extensions ['ros']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(assignment2_rt) by extension 'ros'
+[0.393s] DEBUG:colcon.colcon_core.package_identification:Package 'assignment2_rt' with type 'ros.ament_python' and name 'assignment2_rt'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extensions ['ignore', 'ignore_ament_install']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extension 'ignore'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extension 'ignore_ament_install'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extensions ['colcon_pkg']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extension 'colcon_pkg'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extensions ['colcon_meta']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extension 'colcon_meta'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extensions ['ros']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(bme_gazebo_sensors1) by extension 'ros'
+[0.394s] DEBUG:colcon.colcon_core.package_identification:Package 'bme_gazebo_sensors1' with type 'ros.ament_cmake' and name 'bme_gazebo_sensors1'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extension 'ignore'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extension 'ignore_ament_install'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extensions ['colcon_pkg']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extension 'colcon_pkg'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extensions ['colcon_meta']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extension 'colcon_meta'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extensions ['ros']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(custom_message) by extension 'ros'
+[0.396s] DEBUG:colcon.colcon_core.package_identification:Package 'custom_message' with type 'ros.ament_cmake' and name 'custom_message'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.396s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'cmake_target' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'cmake_clean_cache' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'cmake_clean_first' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'cmake_force_configure' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'ament_cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'catkin_cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors1' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.423s] DEBUG:colcon.colcon_core.verb:Building package 'bme_gazebo_sensors1' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ws/src/build/bme_gazebo_sensors1', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ws/src/install/bme_gazebo_sensors1', 'merge_install': False, 'path': '/home/ubuntu/ws/src/bme_gazebo_sensors1', 'symlink_install': False, 'test_result_base': None}
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'cmake_target' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'cmake_clean_cache' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'cmake_clean_first' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'cmake_force_configure' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'ament_cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'catkin_cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'custom_message' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.423s] DEBUG:colcon.colcon_core.verb:Building package 'custom_message' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ws/src/build/custom_message', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ws/src/install/custom_message', 'merge_install': False, 'path': '/home/ubuntu/ws/src/custom_message', 'symlink_install': False, 'test_result_base': None}
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'cmake_target' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'cmake_clean_cache' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'cmake_clean_first' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'cmake_force_configure' from command line to 'False'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'ament_cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'catkin_cmake_args' from command line to 'None'
+[0.423s] Level 5:colcon.colcon_core.verb:set package 'assignment2_rt' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.423s] DEBUG:colcon.colcon_core.verb:Building package 'assignment2_rt' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ws/src/build/assignment2_rt', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ws/src/install/assignment2_rt', 'merge_install': False, 'path': '/home/ubuntu/ws/src/assignment2_rt', 'symlink_install': False, 'test_result_base': None}
+[0.423s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.424s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.424s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/ws/src/custom_message' with build type 'ament_cmake'
+[0.424s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ws/src/custom_message'
+[0.431s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.431s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.431s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.444s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/ws/src/bme_gazebo_sensors1' with build type 'ament_cmake'
+[0.444s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ws/src/bme_gazebo_sensors1'
+[0.445s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.445s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ws/src/build/custom_message': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/ws/src/custom_message -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ws/src/install/custom_message
+[0.458s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ws/src/build/bme_gazebo_sensors1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/ws/src/bme_gazebo_sensors1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ws/src/install/bme_gazebo_sensors1
+[1.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ws/src/build/bme_gazebo_sensors1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/ws/src/bme_gazebo_sensors1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ws/src/install/bme_gazebo_sensors1
+[1.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ws/src/build/bme_gazebo_sensors1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ws/src/build/bme_gazebo_sensors1 -- -j22 -l22
+[1.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ws/src/build/bme_gazebo_sensors1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ws/src/build/bme_gazebo_sensors1 -- -j22 -l22
+[1.418s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ws/src/build/bme_gazebo_sensors1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ws/src/build/bme_gazebo_sensors1
+[1.438s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bme_gazebo_sensors1)
+[1.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ws/src/build/bme_gazebo_sensors1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ws/src/build/bme_gazebo_sensors1
+[1.445s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1' for CMake module files
+[1.445s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1' for CMake config files
+[1.445s] Level 1:colcon.colcon_core.shell:create_environment_hook('bme_gazebo_sensors1', 'cmake_prefix_path')
+[1.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/hook/cmake_prefix_path.ps1'
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/hook/cmake_prefix_path.dsv'
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/hook/cmake_prefix_path.sh'
+[1.448s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/bin'
+[1.448s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/lib/pkgconfig/bme_gazebo_sensors1.pc'
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/lib/python3.12/site-packages'
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/bin'
+[1.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.ps1'
+[1.451s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.dsv'
+[1.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.sh'
+[1.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.bash'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.zsh'
+[1.454s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/colcon-core/packages/bme_gazebo_sensors1)
+[1.454s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bme_gazebo_sensors1)
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1' for CMake module files
+[1.455s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1' for CMake config files
+[1.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('bme_gazebo_sensors1', 'cmake_prefix_path')
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/hook/cmake_prefix_path.ps1'
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/hook/cmake_prefix_path.dsv'
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/hook/cmake_prefix_path.sh'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/bin'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/lib/pkgconfig/bme_gazebo_sensors1.pc'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/lib/python3.12/site-packages'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/bin'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.ps1'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.dsv'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.sh'
+[1.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.bash'
+[1.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/bme_gazebo_sensors1/package.zsh'
+[1.457s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ws/src/install/bme_gazebo_sensors1/share/colcon-core/packages/bme_gazebo_sensors1)
+[3.320s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ws/src/build/custom_message' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ubuntu/ws/src/custom_message -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ws/src/install/custom_message
+[3.320s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ws/src/build/custom_message': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ws/src/build/custom_message -- -j22 -l22
+[6.474s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ws/src/build/custom_message' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ws/src/build/custom_message -- -j22 -l22
+[6.475s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ws/src/build/custom_message': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ws/src/build/custom_message
+[6.561s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_message)
+[6.562s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message' for CMake module files
+[6.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ws/src/build/custom_message' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ws/src/build/custom_message
+[6.562s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message' for CMake config files
+[6.563s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_message', 'cmake_prefix_path')
+[6.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/cmake_prefix_path.ps1'
+[6.563s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/cmake_prefix_path.dsv'
+[6.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/cmake_prefix_path.sh'
+[6.564s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/lib'
+[6.564s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_message', 'ld_library_path_lib')
+[6.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/ld_library_path_lib.ps1'
+[6.565s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/ld_library_path_lib.dsv'
+[6.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/ld_library_path_lib.sh'
+[6.565s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/bin'
+[6.565s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/lib/pkgconfig/custom_message.pc'
+[6.565s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages'
+[6.565s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_message', 'pythonpath')
+[6.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/pythonpath.ps1'
+[6.566s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/pythonpath.dsv'
+[6.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/pythonpath.sh'
+[6.566s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/bin'
+[6.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.ps1'
+[6.568s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.dsv'
+[6.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.sh'
+[6.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.bash'
+[6.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.zsh'
+[6.569s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ws/src/install/custom_message/share/colcon-core/packages/custom_message)
+[6.569s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_message)
+[6.569s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message' for CMake module files
+[6.570s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message' for CMake config files
+[6.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_message', 'cmake_prefix_path')
+[6.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/cmake_prefix_path.ps1'
+[6.570s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/cmake_prefix_path.dsv'
+[6.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/cmake_prefix_path.sh'
+[6.571s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/lib'
+[6.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_message', 'ld_library_path_lib')
+[6.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/ld_library_path_lib.ps1'
+[6.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/ld_library_path_lib.dsv'
+[6.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/ld_library_path_lib.sh'
+[6.572s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/bin'
+[6.572s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/lib/pkgconfig/custom_message.pc'
+[6.572s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages'
+[6.572s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_message', 'pythonpath')
+[6.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/pythonpath.ps1'
+[6.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/pythonpath.dsv'
+[6.573s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/custom_message/share/custom_message/hook/pythonpath.sh'
+[6.573s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/custom_message/bin'
+[6.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.ps1'
+[6.573s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.dsv'
+[6.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.sh'
+[6.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.bash'
+[6.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/custom_message/share/custom_message/package.zsh'
+[6.574s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ws/src/install/custom_message/share/colcon-core/packages/custom_message)
+[6.575s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/ws/src/assignment2_rt' with build type 'ament_python'
+[6.575s] Level 1:colcon.colcon_core.shell:create_environment_hook('assignment2_rt', 'ament_prefix_path')
+[6.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/hook/ament_prefix_path.ps1'
+[6.576s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/hook/ament_prefix_path.dsv'
+[6.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/hook/ament_prefix_path.sh'
+[6.577s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.577s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.761s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/ws/src/assignment2_rt'
+[6.761s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.761s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.373s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ws/src/assignment2_rt': AMENT_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ubuntu/ws/src/install/custom_message/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/ws/src/build/assignment2_rt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment2_rt build --build-base /home/ubuntu/ws/src/build/assignment2_rt/build install --record /home/ubuntu/ws/src/build/assignment2_rt/install.log --single-version-externally-managed install_data
+[7.720s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/assignment2_rt' for CMake module files
+[7.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ws/src/assignment2_rt' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/ws/src/install/custom_message:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ubuntu/ws/src/install/custom_message/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/ws/src/build/assignment2_rt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment2_rt build --build-base /home/ubuntu/ws/src/build/assignment2_rt/build install --record /home/ubuntu/ws/src/build/assignment2_rt/install.log --single-version-externally-managed install_data
+[7.721s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/assignment2_rt' for CMake config files
+[7.721s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/assignment2_rt/lib'
+[7.721s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/assignment2_rt/bin'
+[7.721s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/assignment2_rt/lib/pkgconfig/assignment2_rt.pc'
+[7.721s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages'
+[7.721s] Level 1:colcon.colcon_core.shell:create_environment_hook('assignment2_rt', 'pythonpath')
+[7.722s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/hook/pythonpath.ps1'
+[7.722s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/hook/pythonpath.dsv'
+[7.722s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/hook/pythonpath.sh'
+[7.722s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ws/src/install/assignment2_rt/bin'
+[7.722s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assignment2_rt)
+[7.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/package.ps1'
+[7.723s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/package.dsv'
+[7.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/package.sh'
+[7.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/package.bash'
+[7.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/package.zsh'
+[7.724s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ws/src/install/assignment2_rt/share/colcon-core/packages/assignment2_rt)
+[7.725s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.726s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.726s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[7.726s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.739s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[7.739s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.739s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.739s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.753s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[7.754s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.755s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ws/src/install/local_setup.ps1'
+[7.756s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/ws/src/install/_local_setup_util_ps1.py'
+[7.757s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ws/src/install/setup.ps1'
+[7.758s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ws/src/install/local_setup.sh'
+[7.759s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/ws/src/install/_local_setup_util_sh.py'
+[7.759s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ws/src/install/setup.sh'
+[7.760s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ws/src/install/local_setup.bash'
+[7.761s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ws/src/install/setup.bash'
+[7.762s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ws/src/install/local_setup.zsh'
+[7.762s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ws/src/install/setup.zsh'

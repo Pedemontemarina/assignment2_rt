@@ -1,0 +1,26 @@
+[0.486s] Invoking command in '/home/ubuntu/ws/src/assignment2_rt': PYTHONPATH=/home/ubuntu/ws/src/build/assignment2_rt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment2_rt build --build-base /home/ubuntu/ws/src/build/assignment2_rt/build install --record /home/ubuntu/ws/src/build/assignment2_rt/install.log --single-version-externally-managed install_data
+[0.648s] running egg_info
+[0.658s] writing ../build/assignment2_rt/assignment2_rt.egg-info/PKG-INFO
+[0.658s] writing dependency_links to ../build/assignment2_rt/assignment2_rt.egg-info/dependency_links.txt
+[0.658s] writing entry points to ../build/assignment2_rt/assignment2_rt.egg-info/entry_points.txt
+[0.659s] writing requirements to ../build/assignment2_rt/assignment2_rt.egg-info/requires.txt
+[0.659s] writing top-level names to ../build/assignment2_rt/assignment2_rt.egg-info/top_level.txt
+[0.681s] reading manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+[0.682s] writing manifest file '../build/assignment2_rt/assignment2_rt.egg-info/SOURCES.txt'
+[0.682s] running build
+[0.682s] running build_py
+[0.682s] running install
+[0.686s] running install_lib
+[0.696s] running install_data
+[0.696s] copying launch/launch.py -> /home/ubuntu/ws/src/install/assignment2_rt/share/assignment2_rt/launch
+[0.697s] running install_egg_info
+[0.706s] removing '/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt-0.0.0-py3.12.egg-info' (and everything under it)
+[0.707s] Copying ../build/assignment2_rt/assignment2_rt.egg-info to /home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages/assignment2_rt-0.0.0-py3.12.egg-info
+[0.708s] running install_scripts
+[0.781s] Installing average_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[0.782s] Installing control script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[0.782s] Installing fixpoint_server script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[0.782s] Installing move_robot script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[0.782s] Installing threshold_service script to /home/ubuntu/ws/src/install/assignment2_rt/lib/assignment2_rt
+[0.782s] writing list of installed files to '/home/ubuntu/ws/src/build/assignment2_rt/install.log'
+[0.806s] Invoked command in '/home/ubuntu/ws/src/assignment2_rt' returned '0': PYTHONPATH=/home/ubuntu/ws/src/build/assignment2_rt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/custom_message/lib/python3.12/site-packages:/home/ubuntu/ws/src/install/assignment2_rt/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment2_rt build --build-base /home/ubuntu/ws/src/build/assignment2_rt/build install --record /home/ubuntu/ws/src/build/assignment2_rt/install.log --single-version-externally-managed install_data
