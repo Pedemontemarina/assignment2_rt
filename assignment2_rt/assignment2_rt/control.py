@@ -4,6 +4,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Point
 from custom_message.srv import Threshold
 from custom_message.msg import Distance
 from custom_message.srv import FixPoint
@@ -35,9 +36,9 @@ class Control(Node):
         self.user_subscription = self.create_subscription(Twist,'/cmd_user_vel',self.userinput_callback,10) 
 
         #client to set threshold service
-        self.client = self.create_client(Threshold,'get_threshold')
+        self.client_T = self.create_client(Threshold,'get_threshold')
        
-        while not self.client.wait_for_service(timeout_sec=1.0):
+        while not self.client_T.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for threshold service...")
 
         self.threshold = self.threshold_service_call()
@@ -51,9 +52,9 @@ class Control(Node):
 
         #-----------------------------------------------------------------------------
         # exam
-        self.client = self.create_client(FixPoint,'get_point')
+        self.client_P = self.create_client(FixPoint,'get_point')
 
-        while not self.client.wait_for_service(timeout_sec=1.0):
+        while not self.client_P.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for fixed point service...")
 
         self.fixed_x,self.fixed_y = self.getpoint_service_call()
@@ -62,6 +63,11 @@ class Control(Node):
 
         self.subscriber_fixed = self.create_subscription(Odometry,'/odom',self.compute_fixed_obstacle_distance,10)
         self.publisher_fix = self.create_publisher(Distance, '/obstacle_info_fixed', 10)
+
+        #---------------
+        self.pos_subscriber_ =self.create_subscription(Odometry,'/odom',self.pub_position,10)
+        self.feet_pub_=  self.create_publisher(Point, '/feet', 10)
+
         #--------------------------------------------------------------------------------------
 
         # timer to publish obstacle info at regular intervals
@@ -74,7 +80,7 @@ class Control(Node):
       
     def getpoint_service_call(self):
         req = FixPoint.Request()
-        future = self.client.call_async(req)
+        future = self.client_P.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         response = future.result()
         return response.x, response.y
@@ -83,7 +89,7 @@ class Control(Node):
     def threshold_service_call(self):
         # call the service to set the threshold
         req = Threshold.Request()
-        future = self.client.call_async(req)
+        future = self.client_T.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         response = future.result()
         return response.threshold
@@ -108,7 +114,7 @@ class Control(Node):
         self.user_linear_velocity = user_velocity.linear.x
         self.user_angular_velocity = user_velocity.angular.z
 
-    
+    #-----------------------------------------------------------------------------------
     def publish_obstacle_info(self):
         # publish info about the closest obstacle
         distance_msg = Distance()
@@ -129,9 +135,18 @@ class Control(Node):
         dx = self.fixed_x - self.x
         dy = self.fixed_y - self.y
         self.distance = (dx**2 + dy**2)**0.5
-        
-        
+    
+    def pub_position(self,msg:Odometry):
+        self.x = msg.pose.pose.position.x
+        self.y = msg.pose.pose.position.y
+        feet_x = self.x *3.28
+        feet_y = self.y *3.28
+        msg_feet = Point()
+        msg_feet.x= feet_x
+        msg_feet.y= feet_y
+        self.feet_pub_.publish(msg_feet)
 
+#---------------------------------------------------------------------------
     def control_loop(self):
 
         if self.backup_active:
