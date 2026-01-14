@@ -9,7 +9,7 @@ def generate_launch_description():
         ExecuteProcess(
             cmd=[
                 'xterm', '-hold', '-e',
-                'bash -c "ros2 run assignment2_rt move_robot"'
+                'bash -c "ros2 run assignment2_rt move_robot --ros-args -r /cmd_vel:=/robot_vel"'
             ],
             output='screen'),
         
@@ -23,7 +23,8 @@ def generate_launch_description():
         Node(
             package='assignment2_rt',
             executable='control',
-            name='robot_controller'),
+            name='robot_controller',
+            remappings=[ ('/cmd_vel', '/robot_vel')]),
         
       
 
