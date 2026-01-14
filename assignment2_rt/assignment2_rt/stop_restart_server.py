@@ -14,7 +14,7 @@ class StopRestartServer(Node):
         self.srv = self.create_service(StopRestart,'stop_restart', self.callback)
         self.get_logger().info("StopRestart server ready.")
 
-    def callbak(self, request, response):
+    def callback(self, request, response):
 
         if request.stop:
             stop_msg = Twist()
